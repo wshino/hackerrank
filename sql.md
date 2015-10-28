@@ -45,3 +45,9 @@ WHERE
     CountryCode = 'JPN'
 ;
 ```
+
+### Weather Observation Station 1
+
+```
+SELECT CITY, STATE FROM STATION ORDER BY CITY, STATE ASC;
+```
