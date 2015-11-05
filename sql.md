@@ -78,3 +78,9 @@ UNION
 ```mysql
 SELECT DISTINCT CITY FROM STATION WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' ORDER BY CITY ASC;
 ```
+
+### Weather Observation Station 7
+
+```oracle
+SELECT DISTINCT CITY FROM STATION WHERE CITY like '%a' OR CITY like '%e' OR CITY like '%i' OR CITY like '%o' OR CITY like '%u' ORDER BY CITY ASC;
+```
