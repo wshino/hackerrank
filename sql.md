@@ -106,3 +106,57 @@ SELECT DISTINCT CITY FROM STATION WHERE CITY NOT LIKE 'A%' AND CITY NOT LIKE 'E%
 ```Oracle
 SELECT DISTINCT CITY FROM STATION WHERE CITY NOT LIKE '%a' AND CITY NOT LIKE '%e' AND CITY NOT LIKE '%i' AND CITY NOT LIKE '%o' AND CITY NOT LIKE '%u' ORDER BY CITY ASC;
 ```
+
+### Weather Observation Station 11
+
+```Oracle
+SELECT DISTINCT CITY FROM (
+    SELECT CITY 
+    FROM STATION 
+    WHERE CITY NOT LIKE '%a' 
+        AND CITY NOT LIKE '%e' 
+        AND CITY NOT LIKE '%i' 
+        AND CITY NOT LIKE '%o' 
+        AND CITY NOT LIKE '%u'
+    UNION ALL 
+    SELECT CITY 
+    FROM STATION 
+    WHERE 
+        CITY NOT LIKE 'A%' 
+        AND CITY NOT LIKE 'E%' 
+        AND CITY NOT LIKE 'I%' 
+        AND CITY NOT LIKE 'O%' 
+        AND CITY NOT LIKE 'U%'
+) 
+ORDER BY CITY ASC;
+```
+
+### Weather Observation Station 12
+
+```Oracle
+SELECT DISTINCT CITY 
+FROM (
+    SELECT CITY 
+    FROM STATION 
+    WHERE 
+        CITY NOT LIKE 'A%' 
+        AND CITY NOT LIKE 'E%' 
+        AND CITY NOT LIKE 'I%' 
+        AND CITY NOT LIKE 'O%' 
+        AND CITY NOT LIKE 'U%'
+) 
+WHERE 
+    CITY NOT LIKE '%a' 
+    AND CITY NOT LIKE '%e' 
+    AND CITY NOT LIKE '%i' 
+    AND CITY NOT LIKE '%o' 
+    AND CITY NOT LIKE '%u' 
+ORDER BY CITY ASC;
+```
+
+### Higher Than 75 Marks
+
+```Oracle
+SELECT Name FROM Students WHERE Marks > 75 ORDER BY REVERSE(SUBSTR(REVERSE(Name),1,3)) ASC;
+```
+
