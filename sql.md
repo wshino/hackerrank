@@ -268,3 +268,9 @@ SELECT AVG(Population) FROM City WHERE District = 'California';
 ```MySQL
 SELECT ROUND(AVG(Population)) FROM City;
 ```
+
+### Japan Population
+
+```MySQL
+SELECT SUM(Population) FROM City WHERE CountryCode = 'JPN';
+```
