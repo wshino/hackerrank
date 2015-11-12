@@ -256,3 +256,15 @@ SELECT COUNT(ID) FROM City WHERE Population > 100000;
 ```Oracle
 SELECT SUM(Population) FROM City WHERE District = 'California';
 ```
+
+### Revising Aggregations - Averages
+
+```Oracle
+SELECT AVG(Population) FROM City WHERE District = 'California';
+```
+
+### Average Population
+
+```MySQL
+SELECT ROUND(AVG(Population)) FROM City;
+```
