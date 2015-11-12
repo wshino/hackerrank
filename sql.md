@@ -242,3 +242,11 @@ WHERE
 ORDER BY
   Project_End_Date - Project_Start_Date, Project_Start_Date
 ```
+
+## Revising Aggregations
+
+### Revising Aggregations - The Count Function
+
+```Oracle
+SELECT COUNT(ID) FROM City WHERE Population > 100000;
+```
